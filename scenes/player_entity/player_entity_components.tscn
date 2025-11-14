@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://uf2x2swih0fu"]
+
+[ext_resource type="Script" uid="uid://ufhxfe7yn5ae" path="res://scripts/player_entity/HandlerMovement.cs" id="1_8po88"]
+[ext_resource type="PackedScene" uid="uid://bb3x1kghapfmo" path="res://scenes/movement_attributes.tscn" id="2_8po88"]
+
+[node name="PlayerEntityComponents" type="Node"]
+
+[node name="HandlerMovement" type="Node" parent="."]
+script = ExtResource("1_8po88")
+
+[node name="MovementAttributes" parent="." instance=ExtResource("2_8po88")]

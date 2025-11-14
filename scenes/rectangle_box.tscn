@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ohbmlsdbnv6d"]
+
+[ext_resource type="Texture2D" uid="uid://ci8enc8x20hhu" path="res://assets/green_rectangle.png" id="1_x482c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjqp5"]
+
+[node name="RectangleBox" type="StaticBody2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_x482c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.25)
+scale = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_sjqp5")
