@@ -14,6 +14,11 @@ config/name="breakout_clone"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus", "Redot")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MovementAttributes="*res://scripts/attributes/MovementAttributes.cs"
+StatusBall="*res://scripts/attributes/StatusBall.cs"
+
 [display]
 
 window/size/viewport_width=800

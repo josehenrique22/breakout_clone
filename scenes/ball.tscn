@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://vklykjudmyct"]
 
 [ext_resource type="Texture2D" uid="uid://brndgprsb2ot" path="res://assets/breakout_ball.png" id="1_7s4qf"]
-[ext_resource type="PackedScene" uid="uid://bb3x1kghapfmo" path="res://scenes/movement_attributes.tscn" id="2_f7cbr"]
 [ext_resource type="Script" uid="uid://772segjkbdf8" path="res://scripts/BallHandlerComponent.cs" id="3_4dx81"]
+[ext_resource type="Script" uid="uid://blpj027ahro4t" path="res://scripts/StateMachine.cs" id="3_f7cbr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7s4qf"]
 
@@ -17,8 +17,10 @@ position = Vector2(0, -1.87)
 scale = Vector2(1.3, 1.3)
 shape = SubResource("CircleShape2D_7s4qf")
 
-[node name="MovementAttributes" parent="." instance=ExtResource("2_f7cbr")]
-
-[node name="HandlerComponent" type="Node" parent="." node_paths=PackedStringArray("_entity")]
+[node name="HandlerComponent" type="Node" parent="." node_paths=PackedStringArray("_entity", "_stateMachine")]
 script = ExtResource("3_4dx81")
 _entity = NodePath("..")
+_stateMachine = NodePath("StateMachine")
+
+[node name="StateMachine" type="Node" parent="HandlerComponent"]
+script = ExtResource("3_f7cbr")

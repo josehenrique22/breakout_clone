@@ -18,7 +18,7 @@ public partial class HandlerMovement : Node
         var verticalDirection = MovementAttributes.Instance.XInput = Input.GetAxis(leftDirection, rightDirection);
 
 
-        Vector2 direction = new Vector2(verticalDirection, _entity.Velocity.Y);
+        Vector2 direction = new Vector2(verticalDirection, 0.0f);
         Vector2 entityVelocity = direction;
 
         _entity.Velocity = entityVelocity * MovementAttributes.Instance.Speed;

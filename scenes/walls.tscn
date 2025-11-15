@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1aq132x0p1cw"]
+
+[ext_resource type="Texture2D" uid="uid://c66kwfrq5a4f6" path="res://assets/breakout_walls.png" id="1_yax5h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lpna"]
+size = Vector2(9, 20)
+
+[node name="Walls" type="Node2D"]
+scale = Vector2(2, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_yax5h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-27.5, 0)
+scale = Vector2(1, 3.3)
+shape = SubResource("RectangleShape2D_0lpna")

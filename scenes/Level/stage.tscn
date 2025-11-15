@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://236oabr52jre"]
+[gd_scene load_steps=6 format=3 uid="uid://236oabr52jre"]
 
 [ext_resource type="PackedScene" uid="uid://c6upaj3ehwfoa" path="res://scenes/player_entity/player.tscn" id="1_0wwpb"]
 [ext_resource type="PackedScene" uid="uid://chp7qgg2ry4vk" path="res://scenes/spawn_scene.tscn" id="2_js3dd"]
 [ext_resource type="PackedScene" uid="uid://vklykjudmyct" path="res://scenes/ball.tscn" id="3_7r6dr"]
 [ext_resource type="PackedScene" uid="uid://ohbmlsdbnv6d" path="res://scenes/rectangle_box.tscn" id="4_7r6dr"]
+[ext_resource type="PackedScene" uid="uid://b1aq132x0p1cw" path="res://scenes/walls.tscn" id="5_woi13"]
 
 [node name="Stage" type="Node2D"]
 
@@ -17,6 +18,7 @@ _spawnScene = ExtResource("3_7r6dr")
 _camera = NodePath("../Camera2D")
 
 [node name="GroupRectangleBox" type="Node2D" parent="." groups=["Rectangle"]]
+position = Vector2(36, -29)
 
 [node name="RectangleBox" parent="GroupRectangleBox" instance=ExtResource("4_7r6dr")]
 position = Vector2(0, -141)
@@ -35,3 +37,17 @@ position = Vector2(-148, -141)
 
 [node name="RectangleBox6" parent="GroupRectangleBox" instance=ExtResource("4_7r6dr")]
 position = Vector2(-75, -141)
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Walls" parent="Walls" instance=ExtResource("5_woi13")]
+position = Vector2(-273, 164)
+
+[node name="Walls2" parent="Walls" instance=ExtResource("5_woi13")]
+position = Vector2(-273, -97)
+
+[node name="Walls3" parent="Walls" instance=ExtResource("5_woi13")]
+position = Vector2(402, 164)
+
+[node name="Walls4" parent="Walls" instance=ExtResource("5_woi13")]
+position = Vector2(402, -97)
